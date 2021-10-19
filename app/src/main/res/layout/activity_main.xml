@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/activityLayout">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtGpio14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Gpio14 \nLámpara"
+        app:layout_constraintBottom_toBottomOf="@+id/idSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/idSwitch"
+        app:layout_constraintTop_toTopOf="@+id/idSwitch" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtGpio15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Gpio15 \nLed"
+        app:layout_constraintBottom_toBottomOf="@+id/idSwitch"
+        app:layout_constraintStart_toEndOf="@+id/idSwitch"
+        app:layout_constraintTop_toTopOf="@+id/idSwitch" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/idSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLedOn"
+        app:layout_constraintEnd_toEndOf="@+id/btnLedOn"
+        app:layout_constraintStart_toStartOf="@+id/btnLedOn" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLedOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Lámpara On"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLedOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Lámpara Off"
+        app:layout_constraintEnd_toEndOf="@+id/btnLedOn"
+        app:layout_constraintStart_toStartOf="@+id/btnLedOn"
+        app:layout_constraintTop_toBottomOf="@+id/btnLedOn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
